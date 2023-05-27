@@ -22,10 +22,6 @@ import pickle
 from sklearn.metrics import accuracy_score, classification_report
 
 
-# In[14]:
-
-
-
 
 
 # In[39]:
@@ -36,6 +32,7 @@ loaded_model = pickle.load(open('sentiment_model.pkl', 'rb'))
 vectorizer = TfidfVectorizer()
 # Predict sentiment labels for the testing data
 new_text = ["don't like!", "This movie is ok."]
+vectorizer = joblib.load('vector.pkl')
 new_text_vectorized = vectorizer.transform(new_text)
 predicted_sentiments = loaded_model.predict(new_text_vectorized)
 for text, sentiment in zip(new_text, predicted_sentiments):
