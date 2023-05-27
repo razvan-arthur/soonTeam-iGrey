@@ -20,7 +20,7 @@ from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
 import pickle
 from sklearn.metrics import accuracy_score, classification_report
-
+import joblib
 
 
 
@@ -39,26 +39,8 @@ for text, sentiment in zip(new_text, predicted_sentiments):
     print(f"Text: {text}\nPredicted Sentiment: {sentiment}\n")
 
 
-# In[38]:
-
-
-
-
-
-# In[43]:
-
-
-
-
-
-# In[4]:
-
-
-
-
-
-# In[ ]:
-
-
-
+'''
+X_train_vectorized = vectorizer.fit_transform(X_train)
+joblib.dump(vectorizer, 'vectorizer_check.pkl')
+'''
 
