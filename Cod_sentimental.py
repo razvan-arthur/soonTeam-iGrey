@@ -43,4 +43,3 @@ for text, sentiment in zip(new_text, predicted_sentiments):
 X_train_vectorized = vectorizer.fit_transform(X_train)
 joblib.dump(vectorizer, 'vectorizer_check.pkl')
 '''
-
