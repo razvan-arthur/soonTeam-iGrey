@@ -13,7 +13,7 @@ def check_sentiment(business):
     Keyword = business
     Keyword_data = Keyword.replace(" ", "+")
 
-    pages = 3
+    pages = 1
     url = 'https://nitter.net/search?f=tweets&q=' + Keyword_data
 
     for i in range(pages):
