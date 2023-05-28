@@ -1,5 +1,10 @@
 from pytrends.request import TrendReq
+import sys
 
+keyword = sys.argv[1]
+def write_result(value):
+    with open('trend-result.txt', 'w') as file:
+        file.write(str(value))
 def check_trend_interest(keyword):
     pytrends = TrendReq(hl='en-US', tz=360)
 
@@ -12,6 +17,9 @@ def check_trend_interest(keyword):
 
     current_interest = interest_over_time_df[keyword].iloc[-1]
     interest_percentage = (current_interest / 100) * 100
-
+    write_result(interest_percentage)
     return interest_percentage
+
+check_trend_interest(keyword)
+
 

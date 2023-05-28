@@ -17,7 +17,7 @@ def index():
         sentiment = request.form['sentiment']
         sentimentValue = check_sentiment(sentiment)
         volatility = request.form['volatility']
-        volatilityValue = check_volatility(volatility)
+        volatilityValue = check_volatility(volatility       )
 
         return render_template('success.html', trend=trendValue, controversy = controversyValue, sentiment=sentimentValue, volatility=volatilityValue )
     

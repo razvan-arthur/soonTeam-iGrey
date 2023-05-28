@@ -18,6 +18,12 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 # from sklearn.metrics import accuracy_score
 import joblib
 import os
+import sys
+
+username = sys.argv[1]
+def write_result(value):
+    with open('controversy-result.txt', 'w') as file:
+        file.write(str(value))
 def check_controversy(username):
     userList=[]
     userList.append(username)
@@ -60,11 +66,11 @@ def check_controversy(username):
     # indice = np.sum(lista) / len(lista)
     # print( indice)
     pred = 100 - (pos/len(predictions) * 100)
-
+    write_result(pred)
     return pred
 
     # In[ ]:
 
-
+check_controversy(username)
 
 

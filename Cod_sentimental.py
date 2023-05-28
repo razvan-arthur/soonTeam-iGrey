@@ -4,16 +4,21 @@ import joblib
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import time
+import sys
+
 
 
 options = webdriver.ChromeOptions()
 options.add_argument("--headless")
 
+business = sys.argv[1]
+def write_result(value):
+    with open('sentimental-result.txt', 'w') as file:
+        file.write(str(value))
 def check_sentiment(business):
     Keyword = business
     Keyword_data = Keyword.replace(" ", "+")
-
-    pages = 3
+    pages = 1
     url = 'https://nitter.net/search?f=tweets&q=' + Keyword_data
 
     for i in range(pages):
@@ -69,5 +74,10 @@ def check_sentiment(business):
     predicted_sentiments = loaded_model.predict(new_text_vectorized)
     predicted_sentiments = [1 if x == 4 else x for x in predicted_sentiments]
     percentage = (predicted_sentiments.count(1) / len(predicted_sentiments)) * 100
-
+    print(percentage)
+    write_result(percentage)
     return (percentage)
+
+
+check_sentiment(business)
+    # Example usage
