@@ -17,11 +17,10 @@ cd temp_repo || exit 1
 git checkout main # Replace "master" with your branch name if necessary
 git pull origin main
 
-# Extract values from JSON
-business_name=$(jq -r '.business-name' "$json_file")
-stock_name=$(jq -r '.stock-name' "$json_file")
-domain=$(jq -r '.domain' "$json_file")
-ceo_username=$(jq -r '.ceo-username' "$json_file")
+business_name=$(xmllint --xpath "string(/data/business-name)" query-data.xml)
+stock_name=$(xmllint --xpath "string(/data/stock-name)" query-data.xml)
+domain=$(xmllint --xpath "string(/data/domain)" query-data.xml)
+ceo_username=$(xmllint --xpath "string(/data/ceo-username)" query-data.xml)
 
 # Execute Python scripts and capture outputs
 business_name_output=$(python3 "$business_name_script" "$business_name")
