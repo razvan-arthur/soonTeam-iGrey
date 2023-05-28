@@ -8,7 +8,7 @@ import subprocess
 # git.Repo.clone_from(repo_url, repo_dir)
 
 # Load the JSON file
-json_file_path = f"{repo_dir}/query-data.json"  # Replace with the actual path to your JSON file
+json_file_path = "query-data.json"  # Replace with the actual path to your JSON file
 with open(json_file_path) as file:
     data = json.load(file)
 
