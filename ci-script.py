@@ -1,11 +1,11 @@
 import json
-import git
+# import git
 import subprocess
 
 # Clone the Git repository
-repo_url = "https://github.com/razvan-arthur/soonTeam-iGrey"  # Replace with your Git repository URL
-repo_dir = "repo"  # Directory where the repository will be cloned
-git.Repo.clone_from(repo_url, repo_dir)
+# repo_url = "https://github.com/razvan-arthur/soonTeam-iGrey"  # Replace with your Git repository URL
+# repo_dir = "repo"  # Directory where the repository will be cloned
+# git.Repo.clone_from(repo_url, repo_dir)
 
 # Load the JSON file
 json_file_path = f"{repo_dir}/query-data.json"  # Replace with the actual path to your JSON file
@@ -13,10 +13,10 @@ with open(json_file_path) as file:
     data = json.load(file)
 
 # Extract values from JSON
-business_name = data["business-name"]
-stock_name = data["stock-name"]
-domain = data["domain"]
-ceo_username = data["ceo-username"]
+business_name = "Apple"
+stock_name = "AAPL"
+domain = "IT"
+ceo_username = "tim_cook"
 
 # Process values using separate Python scripts
 process_scripts = {
@@ -38,7 +38,7 @@ with open(output_file_path, "w") as file:
     json.dump(processed_data, file)
 
 # Commit and push the changes to the Git repository
-repo = git.Repo(repo_dir)
-repo.git.add(output_file_path)
-repo.index.commit("Updated processed data")
-repo.remote().push()
+# repo = git.Repo(repo_dir)
+# repo.git.add(output_file_path)
+# repo.index.commit("Updated processed data")
+# repo.remote().push()
