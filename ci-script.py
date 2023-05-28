@@ -33,7 +33,7 @@ for field, script in process_scripts.items():
     processed_data[field] = result.stdout.strip()
 
 # Save processed data to a new JSON file
-output_file_path = f"{repo_dir}/processed_data.json"
+output_file_path = processed_data.json"
 with open(output_file_path, "w") as file:
     json.dump(processed_data, file)
 
