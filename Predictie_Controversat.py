@@ -60,7 +60,7 @@ def check_controversy(username):
     # indice = np.sum(lista) / len(lista)
     # print( indice)
     pred = 100 - (pos/len(predictions) * 100)
-
+    print("Controversy done")
     return pred
 
     # In[ ]:

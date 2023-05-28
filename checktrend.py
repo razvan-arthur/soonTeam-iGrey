@@ -12,6 +12,6 @@ def check_trend_interest(keyword):
 
     current_interest = interest_over_time_df[keyword].iloc[-1]
     interest_percentage = (current_interest / 100) * 100
-
+    print("Trend done")
     return interest_percentage
 

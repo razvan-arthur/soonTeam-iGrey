@@ -69,5 +69,5 @@ def check_sentiment(business):
     predicted_sentiments = loaded_model.predict(new_text_vectorized)
     predicted_sentiments = [1 if x == 4 else x for x in predicted_sentiments]
     percentage = (predicted_sentiments.count(1) / len(predicted_sentiments)) * 100
-
+    print("Sentiment done")
     return (percentage)
