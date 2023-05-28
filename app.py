@@ -32,7 +32,7 @@ def index():
         volatilityValue = 2- volatilityValue
         list_avg = mean(values)
         finalValue = list_avg*volatilityValue
-        return render_template('success.html', trend=int(trendValue), controversy = int(controversyValue), sentiment=int(sentimentValue), volatility=volatilityValue, final=int(finalValue))
+        return render_template('success.html', trend=int(trendValue), controversy = int(controversyValue), sentiment=int(sentimentValue), volatility= volatilityValue, final=int(finalValue))
     
     # Render the form page for GET requests
     return render_template('form.html')

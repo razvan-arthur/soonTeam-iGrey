@@ -1,15 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Success</title>
+    <title>soonTeam iGrey</title>
+    <link rel="stylesheet" href="/static/index.css" />
 </head>
 <body>
-    <h1>Success!</h1>
-    <p>Business area is trending at a level of {{ trend }}</p>
-    <p>Controversy level is {{ controversy }}</p>
-    <p>Public sentiment towards the business is {{ sentiment }}</p>
-    <p>Stock volatility is {{ volatility }}</p>
-    <p>Final value is {{ final }}</p>
+    <div class="form-panel">
+        <div class="title">
+            <h4>Soon Team iGrey</h4>
+            <h1>Business Analyzer</h1>
+        </div>
+        <div class="form">
+            <form method="POST">
+                <label for="sentiment">Business name</label>
+                <input type="text" name="sentiment" id="sentiment" required>
+                <label for="trend">Domeniu de activitate</label>
+                <input type="text" name="trend" id="trend" required>
+                <label for="controversy">CEO username</label>
+                <input type="text" name="controversy" id="controversy" required>
+                <label for="volatility">Stock Name</label>
+                <input type="text" name="volatility" id="volatility" required>
 
+                <input class="submit-button" type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+    <div class="results-panel">
+        <div class="title">
+            <h1>Success!</h1>
+        </div>
+        <div class="results">
+            <p>Business area is trending at a level of {{ trend }}</p>
+            <p>Controversy level is {{ controversy }}</p>
+            <p>Public sentiment towards the business is {{ sentiment }}</p>
+            <p>Stock volatility is {{ volatility }}</p>
+            <p>Final value: {{ final }}</p>
+        </div>
+    </div>
 </body>
 </html>
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>My Form</title>-->
+<!--    <link rel="stylesheet" href="/static/index.css" />-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="form-panel">-->
+<!--        <div class="title">-->
+<!--            <h4> Soon Team iGrey </h4>-->
+<!--            <h1> Business Analyzer </h1>-->
+<!--        </div>-->
+<!--        <div class="form">-->
+<!--            <form method="POST">-->
+<!--                <label for="sentiment">Business name</label>-->
+<!--                <input type="text" name="sentiment" id="sentiment" required>-->
+<!--                <label for="trend">Domeniu de activitate</label>-->
+<!--                <input type="text" name="trend" id="trend" required>-->
+<!--                <label for="controversy">CEO username</label>-->
+<!--                <input type="text" name="controversy" id="controversy" required>-->
+<!--                <label for="volatility">Stock Name</label>-->
+<!--                <input type="text" name="volatility" id="volatility" required>-->
+
+
+
+<!--                <input class=submit-button type="submit" value="Submit">-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <div class="results-panel">-->
+<!--        <div class="title">-->
+<!--            <h1> Business Analyzer </h1>-->
+<!--        </div>-->
+
+<!--    <div class="results">-->
+<!--        <p>Business area is trending at a level of{{ trend }}</p>-->
+<!--        <p>Controversy level is {{ controversy }}</p>-->
+<!--        <p>Public sentiment towards the business is {{ sentiment }}</p>-->
+<!--        <p>Stock volatility is {{ volatility }}</p>-->
+<!--    </div>-->
+
+<!--</body>-->
+<!--</html>-->
