@@ -73,5 +73,6 @@ def check_volatility(keyword):
         volatilities.append(np.sqrt(variance))
 
     volatility = volatilities[name2id[keyword]]
+    print("Volatility done")
 
     return volatility
