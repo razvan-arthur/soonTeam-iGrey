@@ -1,6 +1,7 @@
 import json
 # import git
 import subprocess
+from checktrend import check_trend_interest
 
 # Clone the Git repository
 # repo_url = "https://github.com/razvan-arthur/soonTeam-iGrey"  # Replace with your Git repository URL
@@ -18,6 +19,8 @@ stock_name = "AAPL"
 domain = "IT"
 ceo_username = "tim_cook"
 
+
+check_trend_interest(domain)
 # Process values using separate Python scripts
 process_scripts = {
     "business-name": "Cod_sentimental.py",
